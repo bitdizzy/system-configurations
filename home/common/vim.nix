@@ -1,6 +1,13 @@
 { pkgs, lib, ... }:
 
-{
+let
+  my-papercolor-theme = pkgs.vimUtils.buildVimPlugin {
+    pname = "papercolor-theme";
+    version = "2020-08-23";
+    src = import ./vim/deps/papercolor-theme/thunk.nix;
+    meta.homepage = "https://github.com/bitdizzy/papercolor-theme/";
+  };
+in {
   home = {
     file = {
       vim-working-dir = {
@@ -29,7 +36,7 @@
         nerdtree
         nerdtree-git-plugin
         vim-nix
-        papercolor-theme
+        my-papercolor-theme
         fzf-vim
         YouCompleteMe
       ];
