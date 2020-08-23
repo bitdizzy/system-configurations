@@ -15,7 +15,6 @@ set softtabstop=2
 set shiftwidth=2
 syntax enable
 set t_Co=256
-set nocompatible
 set expandtab
 set backspace=indent,eol,start
 set showcmd
@@ -35,6 +34,8 @@ else
   vnoremap <C-c> :!xclip -f -sel -clip <CR>
   inoremap <C-v> <Esc>:r!xclip -o -sel clip <CR>
 endif
+
+set viminfo+=n~/.vim/.viminfo/.viminfo
 
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+\%#\@<!$/
