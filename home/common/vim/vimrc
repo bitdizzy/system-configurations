@@ -1,0 +1,62 @@
+set nocompatible
+
+filetype plugin indent on
+set autoindent
+set backup
+set history=50
+set hlsearch
+set incsearch
+set number
+set ruler
+set showmatch
+set smartindent
+set ts=2
+set softtabstop=2
+set shiftwidth=2
+syntax enable
+set t_Co=256
+set nocompatible
+set expandtab
+set backspace=indent,eol,start
+set showcmd
+set encoding=utf-8
+set laststatus=2
+set exrc
+
+set background=dark
+colorscheme PaperColor
+
+filetype on
+
+if has ("xterm_clipboard")
+  vnoremap <C-c> "+y
+  inoremap <C-v> <Esc>"+p i
+else
+  vnoremap <C-c> :!xclip -f -sel -clip <CR>
+  inoremap <C-v> <Esc>:r!xclip -o -sel clip <CR>
+endif
+
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+\%#\@<!$/
+:au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+:au InsertLeave * match ExtraWhitespace /\s\+$/
+
+map <leader>\ :NERDTreeToggle<CR>
+
+set mouse=a
+set ttymouse=urxvt
+
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+let g:fzf_preview_window = 'right:60%'
+nnoremap <c-p> :Files<cr>
+augroup fzf
+  autocmd!
+  autocmd! FileType fzf
+  autocmd  FileType fzf set laststatus=0 noshowmode noruler
+    \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+augroup END
+
+let g:haskell_indent_disable = 1

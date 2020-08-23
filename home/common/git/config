@@ -1,0 +1,9 @@
+[user]
+  email = dev@bitdizzy.io
+  name = bitdizzy
+
+[pull]
+	rebase = false
+
+[merge]
+  conflictstyle=diff3
