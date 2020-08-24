@@ -57,5 +57,5 @@ main = do
 newKeys oldKeys conf@(XConfig {XMonad.modMask = modMask}) =
   oldKeys conf & at (modMask, xK_q) .~  Just (spawn "physlock")
                & at (modMask, xK_F12) .~ Just (sendMessage ToggleStruts)
-               & at (modMask, xK_r) .~ Just (passPrompt myPromptConfig)
+               & at (modMask, xK_r) .~ Just (passPrompt def)
                & at (modMask .|. shiftMask, xK_r) .~ Just (passGeneratePrompt myPromptConfig)
