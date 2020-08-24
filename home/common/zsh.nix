@@ -14,7 +14,7 @@
       dotDir = "zsh";
       initExtra = ''
         setopt PromptSp
-        export FZF_DEFAULT_COMMAND='ag -g ""'
+        export FZF_DEFAULT_COMMAND='ag -i -g ""'
       '';
       oh-my-zsh = {
         enable = true;
