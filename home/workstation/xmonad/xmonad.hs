@@ -17,6 +17,7 @@ import System.IO
 import System.Taffybar.Support.PagerHints
 
 import XMonad.Actions.SwapWorkspaces
+import XMonad.Hooks.DebugEvents
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.UrgencyHook
@@ -50,7 +51,7 @@ main = do
             & lnClickJustFocuses .~ False
             & lnLayoutHook %~ (fullscreenFull . avoidStruts)
             & lnManageHook %~ (manageDocks <>)
-            & lnHandleEventHook %~ (mconcat [fullscreenEventHook, docksEventHook] <>)
+            & lnHandleEventHook %~ (mconcat [fullscreenEventHook, docksEventHook, debugEventsHook] <>)
             & lnLogHook .~ fadeInactiveLogHook 0.85
             & lnKeys %~ newKeys
 
