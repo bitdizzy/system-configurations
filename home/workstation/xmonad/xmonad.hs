@@ -51,7 +51,7 @@ main = do
             & lnClickJustFocuses .~ False
             & lnLayoutHook %~ (fullscreenFull . avoidStruts)
             & lnManageHook %~ (manageDocks <>)
-            & lnHandleEventHook %~ (mconcat [fullscreenEventHook, docksEventHook, debugEventsHook] <>)
+            & lnHandleEventHook %~ (mconcat [fullscreenEventHook, docksEventHook{-, debugEventsHook -}] <>)
             & lnLogHook .~ fadeInactiveLogHook 0.85
             & lnKeys %~ newKeys
 
