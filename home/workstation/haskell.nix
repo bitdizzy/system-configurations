@@ -35,5 +35,5 @@ with pkgs.haskell.lib; pkgs.haskell.packages.${compiler}.extend (self: super: {
     };
     taffyBarFork = addPkgconfigDepends (doJailbreak (self.callCabal2nix "taffybar" (import ./haskell/deps/taffybar/thunk.nix) {})) [pkgs.gtk3];
   in appendPatch taffyBarFork giCompatPatch;
-  xmonad-contrib = doJailbreak (self.callCabal2nix "xmonad-contrib" (import ./haskell/deps/xmonad-contrib/thunk.nix) {});
+  xmonad-contrib = enableDWARFDebugging (doJailbreak (self.callCabal2nix "xmonad-contrib" (import ./haskell/deps/xmonad-contrib/thunk.nix) {}));
 })
