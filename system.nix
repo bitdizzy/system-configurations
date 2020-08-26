@@ -1,7 +1,9 @@
 { nixpkgs, conf, testArgs ? {} }:
 
 rec {
-  testEvaluation = (nixos (testArgs // { basaltSrc = import ./deps/basalt/thunk.nix; })).config // { passthru = null; };
+  testNixos = (nixos (testArgs // { basaltSrc = import ./deps/basalt/thunk.nix; }));
+
+  testEvaluation = testNixos.config // { passthru = null; };
 
   testConfiguration = { config, pkgs, ... }: {
     imports = [

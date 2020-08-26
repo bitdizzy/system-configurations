@@ -2,6 +2,7 @@
 
 {
   imports = [
+    (import ./dwarffs.nix)
     (import ./kernel.nix)
     (import ./keybase.nix)
     (import ./kwallet.nix)
