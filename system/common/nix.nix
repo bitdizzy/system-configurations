@@ -14,6 +14,7 @@
     nixPath = [
       "nixpkgs=${nixpkgs}"
       "nixos-config=${configurationSrc}"
+      "nixpkgs-overlays=${../../overlays}"
     ];
     nrBuildUsers = numBuildCores * 2;
     buildCores = numBuildCores;

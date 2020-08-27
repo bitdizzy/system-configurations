@@ -1,11 +1,10 @@
-{ basaltSrc, openPorts, externalHost, taskServerPort, adminEmail, taskUsers, privateConfig ? [] }: { config, pkgs, ... }:
+{ basaltSrc, configurationSrc, openPorts, externalHost, taskServerPort, adminEmail, taskUsers, privateConfig ? [] }: { config, pkgs, ... }:
 
 let hostName = "lucy";
     numBuildCores = 6;
     displayDpi = 220;
     videoDriver = "nvidia";
     nixpkgs = import ../deps/nixpkgs-stable/thunk.nix;
-    configurationSrc = ./lucy.nix;
 in {
   ### Sucks
   system.stateVersion = "18.03";

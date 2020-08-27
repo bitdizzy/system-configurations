@@ -1,4 +1,4 @@
-{ basaltSrc, privateConfig ? [] }: { config, pkgs, ... }:
+{ basaltSrc, configurationSrc, privateConfig ? [] }: { config, pkgs, ... }:
 
 let
   hostName = "isbell";
@@ -6,7 +6,6 @@ let
   displayDpi = 220;
   videoDriver = "nvidia";
   nixpkgs = import ../deps/nixpkgs-stable/thunk.nix;
-  configurationSrc = ./isbell.nix;
 in {
   ### Sucks
   system.stateVersion = "17.03";

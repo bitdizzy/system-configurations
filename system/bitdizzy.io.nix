@@ -1,10 +1,9 @@
-{ basaltSrc, openPorts, externalHost, adminEmail, privateConfig ? [] }: {config, pkgs, ... }:
+{ basaltSrc, configurationSrc, openPorts, externalHost, adminEmail, privateConfig ? [] }: {config, pkgs, ... }:
 
 let
   hostName = "bitdizzy";
   numBuildCores = 1;
   nixpkgs = import ../deps/nixpkgs-stable/thunk.nix;
-  configurationSrc = ./bitdizzy.io.nix;
 in {
 
   ### Sucks
