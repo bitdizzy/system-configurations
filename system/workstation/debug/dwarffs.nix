@@ -4,6 +4,8 @@ let
   dwarffs = import (import ./deps/dwarffs/thunk.nix);
 in {
 
+  environment.enableDebugInfo = true;
+
   systemd.packages = [
     dwarffs.defaultPackage."${builtins.currentSystem}"
   ];
