@@ -15,6 +15,7 @@ in {
       audacity
       calc
       chromium
+      ctags
       discord
       djview
       dmenu
