@@ -36,6 +36,7 @@ in {
       xclip
       xdelta
       xdotool
+      xorg.xbacklight
       xorg.xkill
       xsel
     ] ++ hask;
