@@ -18,10 +18,6 @@
       ];
     };
 
-    blacklistedKernelModules = [
-      "i2c_hid"
-    ];
-
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = false;
