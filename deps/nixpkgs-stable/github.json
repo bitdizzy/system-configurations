@@ -3,6 +3,6 @@
   "repo": "nixpkgs",
   "branch": "nixos-20.03",
   "private": false,
-  "rev": "cb1996818edf506c0d1665ab147c253c558a7426",
-  "sha256": "0lb6idvg2aj61nblr41x0ixwbphih2iz8xxc05m69hgsn261hk3j"
+  "rev": "773ef5ae78339db744b917c2b35d28812028bd8c",
+  "sha256": "0j07y007g2yk2mmp56xhdbwhjlnpdmp1lvsmx5nzfakcp8n3q7ci"
 }
