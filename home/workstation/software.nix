@@ -11,7 +11,6 @@ in {
   home = {
     packages = with pkgs; [
       arandr
-      adobe-reader
       audacity
       calc
       chromium
