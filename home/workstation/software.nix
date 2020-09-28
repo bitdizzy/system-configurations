@@ -1,4 +1,4 @@
-{ ghcVersion, haskellPackages }: { pkgs, lib, ... }:
+{ ghcVersion, haskellPackages, unstablePkgs }: { pkgs, lib, ... }:
 
 let
   hask = with haskellPackages; [
@@ -31,8 +31,7 @@ in {
       spotify
       tor-browser-bundle-bin
       vlc
-      wine
-      winetricks
+      unstablePkgs.wineUnstable
       xclip
       xdelta
       xdotool

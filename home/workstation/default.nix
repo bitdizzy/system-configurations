@@ -12,7 +12,7 @@ in {
   imports = [
     (import ./direnv.nix { inherit homeDirectory; })
     (import ./secrets.nix { inherit homeDirectory; })
-    (import ./software.nix { inherit ghcVersion; haskellPackages = customHaskellPackages; })
+    (import ./software.nix { inherit ghcVersion unstablePkgs; haskellPackages = customHaskellPackages; })
     (import ./taffybar.nix { haskellPackages = customHaskellPackages; })
     (import ./taskwarrior.nix { inherit homeDirectory taskServerHost taskServerPort taskCredentials; })
     (import ./ui.nix { haskellPackages = customHaskellPackages; })
