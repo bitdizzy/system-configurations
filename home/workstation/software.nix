@@ -32,6 +32,7 @@ in {
       tor-browser-bundle-bin
       vlc
       persoPkgs.wine56
+      winetricks
       xclip
       xdelta
       xdotool
