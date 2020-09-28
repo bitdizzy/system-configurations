@@ -7,6 +7,7 @@
       dwarf-fortress
       electrum
       monero-gui
+      playonlinux
     ];
   };
 
