@@ -32,6 +32,7 @@ in {
       tor-browser-bundle-bin
       vlc
       wine
+      winetricks
       xclip
       xdelta
       xdotool
