@@ -3,6 +3,6 @@
   "repo": "nixpkgs",
   "branch": "dizzy/wine-fork",
   "private": false,
-  "rev": "793ad6a58151a2290238ee2b5cf311847a38a3d5",
-  "sha256": "0ihds6kpj0nfiwqh469kvsv6rmrr1hn0iw3d94gkwmz13ggzrqzi"
+  "rev": "f14bffd26723f6ef12627a8529f9988770576da9",
+  "sha256": "084j8gm3ag1sx7a0sfyagm80micq5xv46zibd6f0jcqvlmlkvl4s"
 }
