@@ -7,7 +7,6 @@
       dwarf-fortress
       electrum
       monero-gui
-      lutris
     ];
   };
 

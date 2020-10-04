@@ -31,7 +31,7 @@ in {
       spotify
       tor-browser-bundle-bin
       vlc
-      persoPkgs.wine55
+      persoPkgs.wine-staging
       winetricks
       xclip
       xdelta
