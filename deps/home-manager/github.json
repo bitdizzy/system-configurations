@@ -3,6 +3,6 @@
   "repo": "home-manager",
   "branch": "add-clipit-service",
   "private": false,
-  "rev": "d42d5b34871e7af32a64c2b410a8cb1ec2586273",
-  "sha256": "1yzi046bs2h3dpsxhka4lzx4ipkahj64pds6w8pfrm8hhp405d1s"
+  "rev": "289b64af741e4647f2018b6c25eed48542082b2f",
+  "sha256": "1hd3pwkf7ngc4y1bmlsjlqz5c0403gz00s2w9sywpn0py3mqlw78"
 }
