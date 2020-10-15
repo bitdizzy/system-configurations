@@ -34,7 +34,6 @@ in {
         #vim-fugitive
         haskell-vim
         nerdtree
-        nerdtree-git-plugin
         vim-nix
         my-papercolor-theme
         fzf-vim
