@@ -5,7 +5,7 @@ let
   unstablePkgs = import nixpkgsUnstableSrc {};
 in {
   imports = [
-    (import ./software.nix { inherit unstablePkgs; }
+    (import ./software.nix { inherit unstablePkgs; })
   ];
 
 }
