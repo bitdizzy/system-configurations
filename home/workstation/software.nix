@@ -39,7 +39,6 @@ in {
       xorg.xbacklight
       xorg.xkill
       xsel
-      zoom-us
     ] ++ hask;
   };
 
