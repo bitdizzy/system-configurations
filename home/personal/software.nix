@@ -1,4 +1,4 @@
-{  pkgs, unstablePkgs, lib, ... }:
+{ unstablePkgs }: {  pkgs, lib, ... }:
 
 {
   home = {
