@@ -8,6 +8,7 @@
       electrum
       monero-gui
       lutris
+      minecraft
     ];
   };
 
