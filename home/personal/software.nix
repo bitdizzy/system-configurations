@@ -1,4 +1,4 @@
-{  pkgs, lib, ... }:
+{  pkgs, unstablePkgs, lib, ... }:
 
 {
   home = {
@@ -8,7 +8,7 @@
       electrum
       monero-gui
       lutris
-      minecraft
+      unstablePkgs.minecraft
     ];
   };
 
