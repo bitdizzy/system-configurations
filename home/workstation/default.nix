@@ -4,7 +4,7 @@ let
   nixpkgsUnstableSrc = import ../../deps/nixpkgs-unstable/thunk.nix;
   unstablePkgs = import nixpkgsUnstableSrc {};
   nixpkgsPersoSrc = import ../../deps/nixpkgs-perso/thunk.nix;
-  persoPkgs = pkgs; #import nixpkgsPersoSrc {};
+  persoPkgs = import nixpkgsPersoSrc {};
   ghcVersion = "ghc884";
   customHaskellPackages = import ./haskell.nix {
     pkgs = unstablePkgs;

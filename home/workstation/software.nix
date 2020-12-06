@@ -15,7 +15,7 @@ in {
       calc
       chromium
       ctags
-      discord
+      persoPkgs.discord
       djview
       dmenu
       evince
@@ -31,7 +31,7 @@ in {
       spotify
       tor-browser-bundle-bin
       vlc
-      persoPkgs.wine-staging
+      wine-staging
       winetricks
       xclip
       xdelta

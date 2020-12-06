@@ -1,8 +1,8 @@
 {
-  "owner": "bitdizzy",
+  "owner": "NixOS",
   "repo": "nixpkgs",
-  "branch": "dizzy/wine-fork",
+  "branch": "master",
   "private": false,
-  "rev": "f14bffd26723f6ef12627a8529f9988770576da9",
-  "sha256": "084j8gm3ag1sx7a0sfyagm80micq5xv46zibd6f0jcqvlmlkvl4s"
+  "rev": "18493dab889d8afbefde6380c7b00fae3d376d3e",
+  "sha256": "1pfw1bqi5psjgxym9lf83hh26sam0d0y26n561ayb0cl1035qvrb"
 }
