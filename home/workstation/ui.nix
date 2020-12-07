@@ -87,7 +87,8 @@
       };
     };
 
-    clipit.enable = true;
+    clipmenu.enable = true;
+
     network-manager-applet.enable = true;
     redshift = {
       enable = true;

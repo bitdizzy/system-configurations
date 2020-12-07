@@ -1,8 +1,8 @@
 {
-  "owner": "bitdizzy",
+  "owner": "nix-community",
   "repo": "home-manager",
-  "branch": "add-clipit-service",
+  "branch": "master",
   "private": false,
-  "rev": "df1fa1b31ce079dd0c111644fa73f42bb1f8ee23",
-  "sha256": "1b53288nflrazf32bcw2jz8hi8pzd9fxrfbhq0ynd61ckfa5zf7d"
+  "rev": "275d1b52126674764f0f3d15c73c2add511bd310",
+  "sha256": "0ci6llimysmshs6zi8nq0ynzw07g8w43avh21s1hci78mlvbf6xd"
 }
