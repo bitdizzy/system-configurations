@@ -1,8 +1,9 @@
-{ home-manager ? import ./deps/home-manager/thunk.nix
+{ pkgs ? import (import ./deps/nixpkgs-stable/thunk.nix) {}
+, home-manager ? import ./deps/home-manager/thunk.nix
 }:
 
 let evalConf = home: (import ./home.nix {
-      inherit home-manager home;
+      inherit pkgs home-manager home;
     });
 in rec {
   testEvaluation = map (x: x.testEvaluation) (builtins.attrValues homes);

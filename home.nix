@@ -1,12 +1,13 @@
-{ home, home-manager }:
+{ pkgs, home, home-manager }:
 
 rec {
   testEvaluation = import "${home-manager}/home-manager/home-manager.nix" {
+    inherit pkgs;
     confPath = testConfiguration;
     confAttr = null;
   };
 
-  testConfiguration = { pkgs, lib, ... }:
+  testConfiguration = { ... }:
     {
       imports = [
         (import home {

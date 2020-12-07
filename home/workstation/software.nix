@@ -1,4 +1,4 @@
-{ ghcVersion, haskellPackages, persoPkgs }: { pkgs, lib, ... }:
+{ ghcVersion, haskellPackages }: { pkgs, lib, ... }:
 
 let
   hask = with haskellPackages; [
@@ -15,7 +15,7 @@ in {
       calc
       chromium
       ctags
-      persoPkgs.discord
+      discord
       djview
       dmenu
       evince
