@@ -1,8 +1,8 @@
 {
   "owner": "nix-community",
   "repo": "home-manager",
-  "branch": "master",
+  "branch": "release-20.09",
   "private": false,
-  "rev": "275d1b52126674764f0f3d15c73c2add511bd310",
-  "sha256": "0ci6llimysmshs6zi8nq0ynzw07g8w43avh21s1hci78mlvbf6xd"
+  "rev": "63f299b3347aea183fc5088e4d6c4a193b334a41",
+  "sha256": "0iksjch94wfvyq0cgwv5wq52j0dc9cavm68wka3pahhdvjlxd3js"
 }
