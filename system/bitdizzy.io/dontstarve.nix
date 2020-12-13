@@ -16,8 +16,8 @@ in {
       app_update 343050 validate
       quit
       CMD
-      ln -sft ./config '${config}'
-      ln -sft ./config/cluster_token '${clusterTokenFile}'
+      cp -rfp '${config}' ./config
+      ln -sf '${clusterTokenFile}' ./config/cluster_token
       cd server/bin
       steam-run ./dontstarve_dedicated_server_nullrenderer -persistent_storage_root ~/dst_test -conf_dir . -cluster config -shard Master
     '';
