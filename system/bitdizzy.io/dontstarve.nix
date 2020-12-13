@@ -56,6 +56,7 @@ in {
       createHome = true;
       home = "/home/dst";
       group = "dst";
+      shell = pkgs.bashInteractive;
     };
   };
 
