@@ -29,6 +29,10 @@ in rec {
         openPorts = [];
         externalHost = "example.com";
         adminEmail = "example@example.com";
+        dontStarveSecret = (import nixpkgs {}).writeTextFile {
+                name = "test";
+                text = "uwu";
+        };
       };
     };
   };
