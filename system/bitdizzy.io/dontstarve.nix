@@ -16,7 +16,7 @@ in {
       app_update 343050 validate
       quit
       CMD
-      cp -rfp '${config}' ./config
+      cp -rfT '${config}' ./config
       ln -sf '${clusterTokenFile}' ./config/cluster_token
       cd server/bin
       steam-run ./dontstarve_dedicated_server_nullrenderer -persistent_storage_root ~/dst_test -conf_dir . -cluster config -shard Master
@@ -55,7 +55,6 @@ in {
       name = "dst";
       createHome = true;
       home = "/home/dst";
-      useDefaultShell = true;
       group = "dst";
     };
   };
