@@ -2,6 +2,7 @@
 
 {
   boot.supportedFilesystems = [ "zfs" ];
+  networking.hostId = "69736265";
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/a11c6658-fc6e-4561-b1a3-c850558e8b74";
