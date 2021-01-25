@@ -3,6 +3,8 @@
 {
   boot.supportedFilesystems = [ "zfs" ];
   networking.hostId = "69736265";
+  services.zfs.autoScrub.enable = true;
+  services.zfs.autoSnapshot.enable = true;
 
   boot.initrd.luks.devices."nixos".device = "/dev/disk/by-uuid/c5a7b841-6614-4d25-bd4a-fd2625d5cc15";
   boot.initrd.luks.devices."nixos-mirror".device = "/dev/disk/by-uuid/a7c3d65f-1ae5-44c5-b75b-eebf489a6273";
