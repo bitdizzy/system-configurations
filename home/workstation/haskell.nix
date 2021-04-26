@@ -1,6 +1,8 @@
 { compiler, pkgs }:
 
-pkgs.haskell.packages.${compiler}
+pkgs.haskell.packages.${compiler}.extend (self: super: {
+  taffybar = self.callCabal2nix "taffybar" (import ./haskell/deps/taffybar/thunk.nix) {};
+})
 
 # with pkgs.haskell.lib; let
 #   gi-cairo-render-src = pkgs.fetchFromGitHub {
