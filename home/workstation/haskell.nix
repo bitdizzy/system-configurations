@@ -1,7 +1,8 @@
 { compiler, pkgs }:
 
+with pkgs.haskell.lib;
 pkgs.haskell.packages.${compiler}.extend (self: super: {
-  taffybar = self.callCabal2nix "taffybar" (import ./haskell/deps/taffybar/thunk.nix) {};
+  taffybar = addPkgconfigDepends (self.callCabal2nix "taffybar" (import ./haskell/deps/taffybar/thunk.nix) {}) [pkgs.gtk3];
 })
 
 # with pkgs.haskell.lib; let
