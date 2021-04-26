@@ -1,5 +1,5 @@
-{ pkgs ? import (import ./deps/nixpkgs-stable/thunk.nix) {}
-, home-manager ? import ./deps/home-manager/thunk.nix
+{ pkgs ? import (import ./deps/nixpkgs-unstable/thunk.nix) {}
+, home-manager ? import ./deps/home-manager-unstable/thunk.nix
 }:
 
 let evalConf = home: (import ./home.nix {

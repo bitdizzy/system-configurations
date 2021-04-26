@@ -3,7 +3,7 @@
 let
   hostName = "bitdizzy";
   numBuildCores = 1;
-  nixpkgs = import ../deps/nixpkgs-stable/thunk.nix;
+  nixpkgs = import ../deps/nixpkgs-unstable/thunk.nix;
 in {
 
   ### Sucks

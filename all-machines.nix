@@ -1,4 +1,4 @@
-{ nixpkgs ? import ./deps/nixpkgs-stable/thunk.nix
+{ nixpkgs ? import ./deps/nixpkgs-unstable/thunk.nix
 }:
 
 let evalConf = machine: (import ./system.nix (machine // { inherit nixpkgs; }));

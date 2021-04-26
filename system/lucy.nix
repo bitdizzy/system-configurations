@@ -4,7 +4,7 @@ let hostName = "lucy";
     numBuildCores = 6;
     displayDpi = 220;
     videoDriver = "nvidia";
-    nixpkgs = import ../deps/nixpkgs-stable/thunk.nix;
+    nixpkgs = import ../deps/nixpkgs-unstable/thunk.nix;
 in {
   ### Sucks
   system.stateVersion = "18.03";
