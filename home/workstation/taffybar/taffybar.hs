@@ -27,7 +27,7 @@ cpuGraphConfig = defaultGraphConfig
   { graphDataColors = [ (0, 0, 0, 1), (0.4, 0.4, 0.4, 0.5)]
   , graphLabel = Just "CPU:"
   , graphBackgroundColor = (0.767,0.767,0.767, 1)
-  , graphHeight = 30
+  -- , graphHeight = 30
   }
 
 memCallback = do
@@ -38,7 +38,7 @@ memGraphConfig = defaultGraphConfig
   { graphDataColors = [ (0, 0, 0, 1), (0.4, 0.4, 0.4, 0.5)]
   , graphBackgroundColor = (0.767,0.767,0.767, 1)
   , graphLabel = Just "Mem:"
-  , graphHeight = 30
+  -- , graphHeight = 30
   }
 
 clockFormat :: String
