@@ -13,6 +13,7 @@ in {
         createHome = true;
         home = "/home/min";
         useDefaultShell = true;
+        isNormalUser = true;
         openssh.authorizedKeys.keys = userKeys.min;
       };
     };
