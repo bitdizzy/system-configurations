@@ -8,4 +8,5 @@
     };
   };
 
+  security.rtkit.enable = true;
 }

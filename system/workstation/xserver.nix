@@ -1,14 +1,13 @@
 { displayDpi, videoDriver }: { config, pkgs, ...}:
 
 {
-  hardware.pulseaudio = {
+
+  services.pipewire = {
     enable = true;
-    support32Bit = true;
-    package = pkgs.pulseaudioFull;
-    zeroconf.discovery.enable = true;
-    daemon.config = {
-      flat-volumes = "no";
-    };
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
   };
 
   hardware.opengl = {
