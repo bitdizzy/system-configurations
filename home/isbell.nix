@@ -6,6 +6,7 @@ in rec {
     (import ./common)
     (import ./workstation { inherit homeDirectory taskServerHost taskServerPort taskCredentials; })
     (import ./laptop)
+    (import ./daw)
   ] ++ privateModules;
 
   home = {
