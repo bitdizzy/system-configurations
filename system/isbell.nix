@@ -17,6 +17,7 @@ in {
     (import ./laptop)
     (import ./bluetooth.nix)
     (import ./isbell { inherit nixpkgs; })
+    (import ./musnix)
   ] ++ privateConfig;
 
 }
