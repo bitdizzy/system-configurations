@@ -4,7 +4,7 @@
   home = {
     packages = with pkgs; [
       ardour
-      cadence
+      carla
       # plugins
       surge
       zynaddsubfx
