@@ -1,4 +1,4 @@
-{ basaltSrc, configurationSrc, openPorts, externalHost, adminEmail, dontStarveSecret, privateConfig ? [] }: {config, pkgs, ... }:
+{ basaltSrc, configurationSrc, openPorts, externalHost, adminEmail, dontStarveSecret, dontStarvePassword, privateConfig ? [] }: {config, pkgs, ... }:
 
 let
   hostName = "bitdizzy";
@@ -13,7 +13,8 @@ in {
     (import ./common { inherit basaltSrc numBuildCores nixpkgs configurationSrc; })
     (import ./headless { inherit hostName; })
     (import ./server { inherit openPorts; })
-    (import ./bitdizzy.io { inherit nixpkgs dontStarveSecret; })
+    (import ./bitdizzy.io { inherit nixpkgs dontStarveSecret dontStarvePassword; })
+    ((import nixpkgs {}).path + /nixos/modules/virtualisation/amazon-image.nix)
   ] ++ privateConfig;
 
 }

@@ -1,50 +1,58 @@
-{ clusterTokenFile }: { config, pkgs, ... }:
+{ clusterTokenFile, clusterPassword }: { config, pkgs, ... }:
 
-let config = ./dontstarve;
+let dst-config = pkgs.callPackage ./dontstarve { inherit clusterTokenFile clusterPassword; };
+    cluster = dst-config.out;
+    modconf = dst-config.modconf;
 in {
 
   systemd.services.dst_master = {
-    wantedBy = [ "multi-user.target" "dst_caves.target" ];
+    wantedBy = [ "multi-user.target" ];
     after = [ "network-online.target" ];
     restartIfChanged = true;
-    path = with pkgs; [ steamcmd ];
-    script = ''
+    path = with pkgs; [ steamcmd steam-run rsync ];
+    preStart = ''
+      set -x
       mkdir -p ./server
       steamcmd << CMD
       login anonymous
-      force_install_dir ./server
+      force_install_dir /home/dst/server
       app_update 343050 validate
       quit
       CMD
-      cp -rfT '${config}' ./config
-      ln -sf '${clusterTokenFile}' ./config/cluster_token
-      cd server/bin
-      steam-run ./dontstarve_dedicated_server_nullrenderer -persistent_storage_root ~/dst_test -conf_dir . -cluster config -shard Master
+      chmod -R u+w ./cluster
+      rsync -a "${modconf}"/dedicated_server_mods_setup.lua /home/dst/server/mods/dedicated_server_mods_setup.lua
+      rsync -a "${cluster}"/ ./cluster
+      chmod -R u+w ./cluster
+    '';
+    script = ''
+      cd ./server/bin
+      steam-run ./dontstarve_dedicated_server_nullrenderer -persistent_storage_root ~ -conf_dir . -cluster cluster -shard Master
     '';
     serviceConfig = {
       User = "dst";
-      KillMode = "process";
       WorkingDirectory = "~";
       Restart = "always";
       RestartSec = 5;
+      TimeoutSec = 10000;
+      KillMode = "control-group";
     };
   };
 
  systemd.services.dst_caves = {
     wantedBy = [ "multi-user.target" ];
-    after = [ "network-online.target" ];
+    after = [ "dst_master.service" "network-online.target" ];
     restartIfChanged = true;
-    path = with pkgs; [ steamcmd ];
+    path = with pkgs; [ steamcmd steam-run ];
     script = ''
       cd server/bin
-      steam-run ./dontstarve_dedicated_server_nullrenderer -persistent_storage_root ~/dst_test -conf_dir . -cluster config -shard Caves
+      steam-run ./dontstarve_dedicated_server_nullrenderer -persistent_storage_root ~ -conf_dir . -cluster cluster -shard Caves
     '';
     serviceConfig = {
       User = "dst";
-      KillMode = "process";
       WorkingDirectory = "~";
       Restart = "always";
       RestartSec = 5;
+      KillMode = "control-group";
     };
   };
 

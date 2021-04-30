@@ -1,4 +1,4 @@
-{ nixpkgs }: { pkgs, config, ... }:
+{ nixpkgs }: { pkgs, lib, config, ... }:
 
 {
   imports = [
@@ -7,6 +7,6 @@
 
   boot = {
     cleanTmpDir = true;
-    loader.grub.device = "/dev/vda";
+    loader.grub.device = lib.mkForce "/dev/nvme0n1";
   };
 }
