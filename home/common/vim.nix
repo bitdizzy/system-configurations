@@ -1,11 +1,19 @@
 { pkgs, lib, ... }:
 
 let
+  # Forked to change highlighting of 'where' in Haskell
   my-papercolor-theme = pkgs.vimUtils.buildVimPlugin {
     pname = "papercolor-theme";
-    version = "2020-08-23";
+    version = "personal";
     src = import ./vim/deps/papercolor-theme/thunk.nix;
     meta.homepage = "https://github.com/bitdizzy/papercolor-theme/";
+  };
+  # Forked to remove '.' from cabal keywords
+  my-haskell-vim = pkgs.vimUtils.buildVimPlugin {
+    pname = "haskell-vim";
+    version = "personal";
+    src = import ./vim/deps/haskell-vim/thunk.nix;
+    meta.homepage = "https://github.com/bitdizzy/haskell-vim/";
   };
 in {
   home = {
@@ -32,7 +40,7 @@ in {
         #limelight
         #ag.vim
         #vim-fugitive
-        haskell-vim
+        my-haskell-vim
         nerdtree
         vim-nix
         my-papercolor-theme
