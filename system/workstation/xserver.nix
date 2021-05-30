@@ -15,7 +15,7 @@
 
   fonts = {
     fontconfig.enable = true;
-    enableFontDir = true;
+    fontDir.enable = true;
     fonts = with pkgs; [
       corefonts  # Micrsoft free fonts
       inconsolata  # monospaced

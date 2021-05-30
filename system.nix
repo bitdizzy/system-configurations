@@ -8,6 +8,8 @@ rec {
 
   testEvaluation = testNixos.config // { passthru = null; };
 
+  testBuild = testNixos.system;
+
   nixos = args: import "${nixpkgs}/nixos" {
     system = "x86_64-linux";
     configuration = import conf args;
