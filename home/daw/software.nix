@@ -2,7 +2,7 @@
 
 {
   home = {
-    packages = with pkgs; [
+    packages = with unstablePkgs; [
       ardour
       carla
       # plugins
