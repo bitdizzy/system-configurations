@@ -17,9 +17,9 @@
       "nixos-config=${configurationSrc}"
       "nixpkgs-overlays=${../../overlays}"
     ];
-    nrBuildUsers = numBuildCores;
+    nrBuildUsers = numBuildCores * 2;
     buildCores = numBuildCores;
-    maxJobs = lib.mkDefault (numBuildCores * 2);
+    maxJobs = lib.mkDefault numBuildCores;
     trustedUsers = [ "@wheel" ];
   };
 
