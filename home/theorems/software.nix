@@ -7,4 +7,7 @@
     ];
   };
 
+  programs.vim.plugins = with pkgs.vimPlugins; [
+    Coqtail
+  ];
 }
