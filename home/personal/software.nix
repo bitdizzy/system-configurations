@@ -9,7 +9,6 @@
       monero-gui
       lutris
       unstablePkgs.minecraft
-      unstablePkgs.coq
     ];
   };
 
