@@ -31,7 +31,7 @@ in {
       spotify
       tor-browser-bundle-bin
       vlc
-      wine-staging
+      wineWowPackages.staging
       winetricks
       xclip
       xdelta
