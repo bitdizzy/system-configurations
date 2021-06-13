@@ -46,6 +46,7 @@ in {
         my-papercolor-theme
         fzf-vim
         YouCompleteMe
+        vim-matchup
       ];
       settings = {
         backupdir = [ "~/.vim/.backup/" ];
