@@ -1,8 +1,8 @@
-{ ghcVersion, haskellPackages }: { pkgs, lib, ... }:
+{ haskellPackages }: { pkgs, lib, ... }:
 
 let
   hask = with haskellPackages; [
-    pkgs.haskell.compiler.${ghcVersion}
+    ghc
     cabal-install
     fast-tags
     ghcid
