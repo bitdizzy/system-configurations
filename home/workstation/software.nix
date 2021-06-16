@@ -39,6 +39,8 @@ in {
       xorg.xbacklight
       xorg.xkill
       xsel
+      #
+      haskell-language-server
     ] ++ hask;
   };
 
