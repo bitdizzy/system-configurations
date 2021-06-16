@@ -17,6 +17,12 @@ let
   };
 in {
   home = {
+
+    packages = with pkgs; [
+      # for coc-nvim
+      nodejs
+    ];
+
     file = {
       vim-working-dir = {
         recursive = true;
