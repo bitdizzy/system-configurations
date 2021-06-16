@@ -1,4 +1,4 @@
-{ homeDirectory }: { pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 {
   home = {
