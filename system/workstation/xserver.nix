@@ -45,7 +45,7 @@
     enable = true;
     layout = "us";
     xkbVariant = "dvorak";
-    xkbOptions = "caps:escape";
+    xkbOptions = "caps:escape,compose:ralt";
 
     autoRepeatDelay = 250;
     autoRepeatInterval = 55;
