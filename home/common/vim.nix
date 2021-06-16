@@ -47,6 +47,7 @@ in {
         fzf-vim
         YouCompleteMe
         vim-matchup
+        coc-nvim
       ];
       settings = {
         backupdir = [ "~/.vim/.backup/" ];
