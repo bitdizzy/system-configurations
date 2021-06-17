@@ -18,11 +18,6 @@ let
 in {
   home = {
 
-    packages = with pkgs; [
-      # for coc-nvim
-      nodejs
-    ];
-
     file = {
       vim-working-dir = {
         recursive = true;
@@ -53,7 +48,6 @@ in {
         fzf-vim
         YouCompleteMe
         vim-matchup
-        coc-nvim
       ];
       settings = {
         backupdir = [ "~/.vim/.backup/" ];
