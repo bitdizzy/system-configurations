@@ -17,7 +17,7 @@ in {
     (import ./taskwarrior.nix { inherit homeDirectory taskServerHost taskServerPort taskCredentials; })
     (import ./ui.nix { haskellPackages = customHaskellPackages; })
     (import ./urxvt.nix)
-    (import ./xcompose.nix)
+    (import ./xcompose.nix { haskellPackages = customHaskellPackages; })
     (import ./xsession.nix)
     (import ./zsh.nix { inherit homeDirectory; })
   ];
