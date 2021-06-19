@@ -54,7 +54,7 @@
     videoDrivers = [ videoDriver ];
 
     displayManager = {
-      defaultSession = "xfce";
+      defaultSession = "xfce+wm-home-manager";
       lightdm.enable = true;
     };
 
