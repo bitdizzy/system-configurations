@@ -62,7 +62,6 @@ augroup END
 
 let g:haskell_indent_disable = 1
 
-set cmdheight=2
 set updatetime=200
 
 let g:ycm_language_server =
