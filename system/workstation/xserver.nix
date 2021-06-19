@@ -53,11 +53,22 @@
 
     videoDrivers = [ videoDriver ];
 
-    displayManager.lightdm = {
-      enable = true;
+    displayManager = {
+      defaultSession = "xfce";
+      lightdm.enable = true;
     };
 
     desktopManager = {
+      xfce = {
+        enable = true;
+        noDesktop = true;
+        enableXfwm = false;
+      };
+      # Custom session for home-manager xsession, because
+      # (at least at the time) NixOS unconditionally defaults
+      # to .xsession if it is present.
+      #
+      # This lets the home-manager xsession coexist with others
       session = [
         {
           name = "home-manager";
