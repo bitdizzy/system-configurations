@@ -38,6 +38,7 @@
       dina-font
       dosemu_fonts
       source-code-pro
+      julia-mono
     ];
   };
 
