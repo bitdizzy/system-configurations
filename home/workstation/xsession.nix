@@ -5,6 +5,7 @@
     enable = true;
     scriptPath = ".xsession-home-manager";
     initExtra = ''
+      $HOME/.fehbg
       xset r rate 250 50
       nvidia-settings --assign GPULogoBrightness=0
       ${pkgs.kwallet-pam}/libexec/pam_kwallet_init
