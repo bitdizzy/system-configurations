@@ -19,8 +19,8 @@
       enable = true;
       package = pkgs.rxvt_unicode-with-plugins;
       fonts = [
-        "xft:Source Code Pro:pixelsize=28:antialias=true"
         "xft:DejaVu Sans Mono:pixelsize=28:antialias=true"
+        "xft:Source Code Pro:pixelsize=28:antialias=true"
         "xft:unifont:pixelsize=28"
       ];
       iso14755 = false;
@@ -48,8 +48,8 @@
       };
       extraConfig = {
         boldFont = ''
-          xft:Source Code Pro:bold:pixelsize=28:antialias=true, \
           xft:DejaVu Sans Mono:bold:pixelsize=28:antialias=true, \
+          xft:Source Code Pro:bold:pixelsize=28:antialias=true, \
           xft:unifont:pixelsize=28:bold
         '';
         "clipboard.copycmd" = "xsel -ib";
