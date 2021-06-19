@@ -80,6 +80,17 @@
       ];
     };
 
+    windowManager = {
+      session = [
+        {
+          name = "wm-home-manager";
+          start = ''
+            ${pkgs.runtimeShell} $HOME/.xsession-home-manager-wm &
+          '';
+        }
+      ];
+    };
+
     dpi = displayDpi;
 
   };

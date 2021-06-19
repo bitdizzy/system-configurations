@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   xsession = {
@@ -10,4 +10,14 @@
       ${pkgs.kwallet-pam}/libexec/pam_kwallet_init
     '';
   };
+
+  # expose just the window manager part of the xsession
+  # for integration with a desktop environment
+  home.file.".xsession-home-manager-wm".text = ''
+
+    ${config.xsession.initExtra}
+
+    ${config.xsession.windowManager.command}
+
+  '';
 }
