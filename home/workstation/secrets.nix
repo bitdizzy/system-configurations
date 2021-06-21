@@ -18,7 +18,8 @@
   services = {
     gpg-agent = {
       enable = true;
-      pinentryFlavor = "qt";
+      # Default for XFCE
+      pinentryFlavor = "gtk2";
     };
 
     password-store-sync = {
