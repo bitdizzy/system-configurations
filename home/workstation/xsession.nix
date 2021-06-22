@@ -8,8 +8,6 @@
       $HOME/.fehbg
 
       nvidia-settings --assign GPULogoBrightness=0
-
-      ${pkgs.kwallet-pam}/libexec/pam_kwallet_init
     '';
   };
 
