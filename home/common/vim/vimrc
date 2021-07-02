@@ -73,3 +73,5 @@ let g:ycm_language_server =
       \   'project_root_files': [ '*.cabal', 'stack.yaml', 'cabal.project', 'package.yaml', 'hie.yaml']
       \ }
       \ ]
+
+let maplocalleader = ","
