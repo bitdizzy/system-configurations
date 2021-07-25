@@ -39,6 +39,7 @@ in {
       xorg.xbacklight
       xorg.xkill
       xsel
+      zotero
       #
       haskell-language-server
     ] ++ hask;
