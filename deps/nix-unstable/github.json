@@ -1,8 +1,8 @@
 {
   "owner": "NixOS",
   "repo": "nix",
-  "branch": "master",
+  "branch": "2.3-maintenance",
   "private": false,
-  "rev": "2b67cb7b8c8ac7953f7e341d760bdb3c021fe765",
-  "sha256": "0fjplgkapinngw27bi4bav2axcj92dsyr6r8dfkdg2gaq1210wra"
+  "rev": "183f2cc395772210f0e5f52d42fece9789412343",
+  "sha256": "11qhvjxdmlr1aizqj714n1z12snrdk6vyn05qnm41b591cvv2vag"
 }
