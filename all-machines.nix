@@ -8,6 +8,7 @@ in rec {
     isbell = evalConf {
       conf = ./system/isbell.nix;
       testArgs = {
+        virtUsers = [];
       };
     };
 
@@ -19,7 +20,7 @@ in rec {
         taskServerPort = 55555;
         adminEmail = "example@example.com";
         taskUsers = [];
-        vboxUsers = [];
+        virtUsers = [];
       };
     };
 

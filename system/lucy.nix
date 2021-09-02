@@ -1,4 +1,4 @@
-{ basaltSrc, configurationSrc, openPorts, externalHost, taskServerPort, adminEmail, taskUsers, vboxUsers, privateConfig ? [] }: { config, pkgs, ... }:
+{ basaltSrc, configurationSrc, openPorts, externalHost, taskServerPort, adminEmail, taskUsers, virtUsers, privateConfig ? [] }: { config, pkgs, ... }:
 
 let hostName = "lucy";
     numBuildCores = 6;
@@ -14,7 +14,7 @@ in {
     (import ./workstation { inherit hostName displayDpi videoDriver; })
     (import ./server { inherit openPorts; })
     (import ./lucy { inherit nixpkgs externalHost taskServerPort adminEmail taskUsers; })
-    (import ./virtualbox.nix { inherit vboxUsers; })
+    (import ./virtualisation.nix { inherit virtUsers; })
   ] ++ privateConfig;
 
 }

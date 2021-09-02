@@ -1,4 +1,4 @@
-{ basaltSrc, configurationSrc, privateConfig ? [] }: { config, pkgs, ... }:
+{ basaltSrc, configurationSrc, virtUsers, privateConfig ? [] }: { config, pkgs, ... }:
 
 let
   hostName = "isbell";
@@ -18,6 +18,7 @@ in {
     (import ./bluetooth.nix)
     (import ./isbell { inherit nixpkgs; })
     (import ./musnix)
+    (import ./virtualisation.nix { inherit virtUsers; })
   ] ++ privateConfig;
 
 }
