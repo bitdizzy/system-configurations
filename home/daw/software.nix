@@ -8,6 +8,7 @@
       # plugins
       surge
       zynaddsubfx
+      drumgizmo
     ];
   };
 }
