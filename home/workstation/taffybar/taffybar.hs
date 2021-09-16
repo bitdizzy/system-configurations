@@ -72,5 +72,5 @@ main = do
     { startWidgets = [ workspaces, layout, windows ]
     , endWidgets = [ tray, clock, bat, mem, cpu, net ]
     , monitorsAction = usePrimaryMonitor
-    , barHeight = 32
+    , barHeight = ExactSize 32
     }

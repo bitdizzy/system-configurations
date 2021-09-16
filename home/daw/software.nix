@@ -5,6 +5,7 @@
     packages = with unstablePkgs; [
       ardour
       carla
+      muse
       # plugins
       surge
       zynaddsubfx
