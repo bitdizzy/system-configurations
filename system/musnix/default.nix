@@ -1,8 +1,8 @@
 { pkgs, lib, ... }:
 
 {
-  boot.kernelPackages = lib.mkForce (pkgs.linuxPackages_5_9_rt);
-  musnix.kernel.packages = pkgs.linuxPackages_5_9_rt;
+  boot.kernelPackages = lib.mkForce (pkgs.linuxPackages_5_6_rt);
+  musnix.kernel.packages = pkgs.linuxPackages_5_6_rt;
   musnix.das_watchdog.enable = true;
   musnix.kernel = {
     optimize = true;
