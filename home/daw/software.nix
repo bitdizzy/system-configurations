@@ -6,6 +6,7 @@
       ardour
       carla
       muse
+      musescore
       # plugins
       surge
       zynaddsubfx
