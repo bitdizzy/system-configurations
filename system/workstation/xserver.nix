@@ -61,7 +61,7 @@
     desktopManager = {
       xfce = {
         enable = true;
-        noDesktop = true;
+        noDesktop = false;
         enableXfwm = false;
       };
       # Custom session for home-manager xsession, because
