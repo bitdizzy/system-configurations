@@ -62,7 +62,7 @@
       xfce = {
         enable = true;
         noDesktop = false;
-        enableXfwm = false;
+        enableXfwm = true;
       };
       # Custom session for home-manager xsession, because
       # (at least at the time) NixOS unconditionally defaults
