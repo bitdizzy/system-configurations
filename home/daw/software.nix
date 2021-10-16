@@ -8,6 +8,7 @@
       muse
       musescore
       # plugins
+      distrho
       surge
       zynaddsubfx
       drumgizmo
