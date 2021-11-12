@@ -39,8 +39,8 @@ in {
         #lastpos.vim
         #ag.vim
         #vim-fugitive
-        goyo.vim
-        limelight
+        goyo-vim
+        limelight-vim
         my-haskell-vim
         nerdtree
         vim-nix
