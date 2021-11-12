@@ -37,10 +37,10 @@ in {
       plugins = with pkgs.vimPlugins; [
         #vim-indent-guides
         #lastpos.vim
-        #goyo.vim
-        #limelight
         #ag.vim
         #vim-fugitive
+        goyo.vim
+        limelight
         my-haskell-vim
         nerdtree
         vim-nix
