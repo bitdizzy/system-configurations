@@ -59,3 +59,4 @@ newKeys oldKeys conf@(XConfig {XMonad.modMask = modMask}) =
                & at (modMask, xK_F12) .~ Just (sendMessage ToggleStruts)
                & at (modMask, xK_r) .~ Just (passPrompt myPromptConfig)
                & at (modMask .|. shiftMask, xK_r) .~ Just (passGeneratePrompt myPromptConfig)
+               & at (modMask .|. shiftMask, xK_q) .~ Nothing
