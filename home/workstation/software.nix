@@ -30,7 +30,7 @@ in {
       scrot
       signal-desktop
       spotify
-      tor-browser-bundle-bin
+      # tor-browser-bundle-bin
       vlc
       wineWowPackages.staging
       winetricks
