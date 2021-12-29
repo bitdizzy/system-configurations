@@ -7,7 +7,7 @@
       dwarf-fortress
       electrum
       monero-gui
-      lutris
+      # lutris
       unstablePkgs.minecraft
     ];
   };
