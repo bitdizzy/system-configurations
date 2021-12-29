@@ -9,6 +9,7 @@ in {
       root.initialHashedPassword = "$6$.Q664jtsxN$MfurQET/NOIUW2gNBAKTdLOqsNNA4fR2BidzOgYrKwMQnCccfM3dQ51ETObKjA2xFIfJBOAeh4Wyzt8X5/GcS0";
       min = {
         name = "min";
+        group = "min";
         extraGroups = [ "wheel" "networkmanager" "fuse" ];
         createHome = true;
         home = "/home/min";
