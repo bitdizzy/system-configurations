@@ -1,0 +1,8 @@
+- Turn these steps into a script
+
+clone basalt develop
+make bare git repo and copy the hooks over
+make a working repo:
+  add basalt thunk
+  add system-configurations thunk and point nixpkgs to it
+set up user repo
