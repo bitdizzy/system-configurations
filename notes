@@ -6,3 +6,5 @@ make a working repo:
   add basalt thunk
   add system-configurations thunk and point nixpkgs to it
 set up user repo
+
+- Make it easier to point to unstable or stable in machine configs
