@@ -96,6 +96,6 @@
   };
 
   # get gnome stuff to work in home manager
-  services.dbus.packages = with pkgs; [ gnome3.dconf ];
+  services.dbus.packages = with pkgs; [ dconf ];
 
 }
