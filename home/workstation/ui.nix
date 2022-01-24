@@ -4,7 +4,7 @@
   home = {
     keyboard = null;
     packages = with pkgs; [
-      gnome3.gtk3
+      gtk3
       gnome3.adwaita-icon-theme
       numix-gtk-theme
       numix-icon-theme
