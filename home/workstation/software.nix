@@ -12,6 +12,7 @@ in {
     packages = with pkgs; [
       arandr
       audacity
+      aws
       calc
       chromium
       ctags
