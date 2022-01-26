@@ -3,7 +3,7 @@
 {
 
   environment.systemPackages =
-    let obelisk = import (import ../../deps/obelisk-internal/thunk.nix) { system = builtins.currentSystem; };
+    let obelisk = import (import ../../deps/obelisk/thunk.nix) { system = builtins.currentSystem; };
         basalt = import basaltSrc;
      in with pkgs; [
           dnsutils
