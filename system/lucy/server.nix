@@ -3,7 +3,7 @@
 {
   security.acme = {
     acceptTerms = true;
-    email = adminEmail;
+    defaults.email = adminEmail;
   };
 
   services = {
