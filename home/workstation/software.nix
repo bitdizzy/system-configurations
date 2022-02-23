@@ -41,7 +41,6 @@ in {
       xorg.xbacklight
       xorg.xkill
       xsel
-      yasm
       zotero
       #
       haskell-language-server
