@@ -24,16 +24,16 @@
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
-      xlibs.fontbitstream100dpi
-      xlibs.fontbitstream75dpi
-      xlibs.fontbitstreamtype1
+      xorg.fontbitstream100dpi
+      xorg.fontbitstream75dpi
+      xorg.fontbitstreamtype1
       vistafonts
       unifont
       terminus_font
       freefont_ttf
       liberation_ttf
       proggyfonts
-      cantarell_fonts
+      cantarell-fonts
       dejavu_fonts
       dina-font
       dosemu_fonts
