@@ -8,6 +8,7 @@
       # this setting is often defaulted too low
       # which leads to hangs in OOM situations
       "vm.min_free_kbytes" = 65536;
+      "kernel.unprivileged_userns_clone" = 1;
     };
   };
 }
