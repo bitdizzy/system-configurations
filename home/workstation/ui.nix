@@ -10,6 +10,13 @@
       numix-icon-theme
       hicolor-icon-theme
     ];
+    pointerCursor = {
+      package = pkgs.vanilla-dmz;
+      name = "Vanilla-DMZ";
+      x11.defaultCursor = "left_ptr";
+      x11.enable = true;
+    };
+
   };
   gtk = {
     enable = true;
@@ -110,11 +117,6 @@
   };
 
   xsession = {
-    pointerCursor = {
-      package = pkgs.vanilla-dmz;
-      name = "Vanilla-DMZ";
-      defaultCursor = "left_ptr";
-    };
     windowManager.xmonad = {
       inherit haskellPackages;
       enable = true;
