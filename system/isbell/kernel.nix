@@ -24,6 +24,6 @@
     };
   };
 
-  powerManagement.cpuFreqGovernor = lib.mkForce "powersave";
+  powerManagement.cpuFreqGovernor = lib.mkForce "performance";
 
 }
