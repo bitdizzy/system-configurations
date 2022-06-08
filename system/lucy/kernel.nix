@@ -18,6 +18,8 @@
       "kvm-intel"
     ];
 
+    kernelParams = [ "intel_pstate=active" ];
+
     kernel.sysctl = {
       "net.core.default_qdisc" = "sch_fq";
     };

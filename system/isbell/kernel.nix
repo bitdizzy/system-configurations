@@ -18,6 +18,8 @@
       ];
     };
 
+    kernelParams = [ "intel_pstate=active" ];
+
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = false;
