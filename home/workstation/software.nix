@@ -1,4 +1,4 @@
-{ haskellPackages }: { pkgs, lib, ... }:
+{ haskellPackages, masterPkgs }: { pkgs, lib, ... }:
 
 let
   hask = with haskellPackages; [
@@ -17,7 +17,7 @@ in {
       chromium
       ctags
       ddd
-      discord
+      masterPkgs.discord
       djview
       dmenu
       evince

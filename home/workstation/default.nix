@@ -2,7 +2,9 @@
 
 let
   nixpkgsUnstableSrc = import ../../deps/nixpkgs-unstable/thunk.nix;
+  nixpkgsMasterSrc = import ../../deps/nixpkgs-master/thunk.nix;
   unstablePkgs = import nixpkgsUnstableSrc {};
+  masterPkgs = import nixpkgsMasterSrc {};
   ghcVersion = ""; # use default compiler which is currently "ghc8104"
   customHaskellPackages = import ./haskell.nix {
     pkgs = unstablePkgs;
@@ -12,7 +14,7 @@ in {
   imports = [
     (import ./direnv.nix { inherit homeDirectory; })
     (import ./secrets.nix { inherit homeDirectory; })
-    (import ./software.nix { haskellPackages = customHaskellPackages; })
+    (import ./software.nix { inherit masterPkgs; haskellPackages = customHaskellPackages; })
     (import ./taffybar.nix { haskellPackages = customHaskellPackages; })
     (import ./taskwarrior.nix { inherit homeDirectory taskServerHost taskServerPort taskCredentials; })
     (import ./ui.nix { haskellPackages = customHaskellPackages; })
