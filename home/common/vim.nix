@@ -39,6 +39,7 @@ in {
         #lastpos.vim
         #ag.vim
         #vim-fugitive
+        vim-pencil
         goyo-vim
         limelight-vim
         my-haskell-vim
