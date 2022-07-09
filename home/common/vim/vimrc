@@ -75,3 +75,5 @@ let g:ycm_language_server =
       \ ]
 
 let maplocalleader = ","
+
+nnoremap <silent><leader>vv :Goyo<cr>:set linebreak<cr>:set wrap<cr>
