@@ -76,4 +76,6 @@ let g:ycm_language_server =
 
 let maplocalleader = ","
 
-nnoremap <silent><leader>vv :Goyo<cr>:SoftPencil<cr>:set linebreak<cr>:set wrap<cr>
+let g:pencil#wrapModeDefault = 'soft'
+
+nnoremap <silent><leader>vv :Goyo<cr>:TogglePencil<cr>:set linebreak<cr>:set wrap<cr>
