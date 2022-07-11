@@ -77,9 +77,11 @@ let g:ycm_language_server =
 let maplocalleader = ","
 
 function! StartProse()
+  setlocal linebreak
   nnoremap <buffer> j gj
   nnoremap <buffer> k gk
   nnoremap <buffer> $ g$
+  nnoremap <buffer> ^ g^
   inoremap <buffer> . .<c-g>u
   inoremap <buffer> ! !<c-g>u
   inoremap <buffer> ? ?<c-g>u
@@ -89,9 +91,11 @@ function! StartProse()
 endfunction
 
 function! StopProse()
+  setlocal nolinebreak
   unmap <buffer> j
   unmap <buffer> k
   unmap <buffer> $
+  unmap <buffer> ^
   iunmap <buffer> .
   iunmap <buffer> !
   iunmap <buffer> ?
