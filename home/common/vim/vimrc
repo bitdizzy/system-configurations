@@ -76,6 +76,33 @@ let g:ycm_language_server =
 
 let maplocalleader = ","
 
-let g:pencil#wrapModeDefault = 'soft'
+function! StartProse()
+  setlocal linebreak
+  setlocal wrap
+  nnoremap <buffer> j gj
+  nnoremap <buffer> k gk
+  inoremap <buffer> . .<c-g>u
+  inoremap <buffer> ! !<c-g>u
+  inoremap <buffer> ? ?<c-g>u
+  inoremap <buffer> , ,<c-g>u
+  inoremap <buffer> ; ;<c-g>u
+  inoremap <buffer> : :<c-g>u
+endfunction
 
-nnoremap <silent><leader>vv :Goyo<cr>:TogglePencil<cr>:set linebreak<cr>:set wrap<cr>
+function! StopProse()
+  setlocal nolinebreak
+  setlocal nowrap
+  unmap <buffer> j
+  unmap <buffer> k
+  iunmap <buffer> .
+  iunmap <buffer> !
+  iunmap <buffer> ?
+  iunmap <buffer> ,
+  iunmap <buffer> ;
+  iunmap <buffer> :
+endfunction
+
+autocmd! User GoyoEnter nested call StartProse()
+autocmd! User GoyoLeave nested call StopProse()
+
+nnoremap <silent><leader>vv :Goyo<cr>
