@@ -3,6 +3,7 @@
 with pkgs.haskell.lib;
 let myPackages = (pkgs.haskell.packages.${compiler} or pkgs.haskellPackages);
 in myPackages.extend (self: super: {
+  nix-thunk = (import (import ./haskell/deps/nix-thunk/thunk.nix) {}).command;
   taffybar = addPkgconfigDepends (self.callCabal2nix "taffybar" (import ./haskell/deps/taffybar/thunk.nix) {}) [pkgs.gtk3];
   gen-xcompose = self.callPackage "${import ./haskell/deps/gen-xcompose/thunk.nix}/package.nix" {};
   # I don't know why taffybar insists on depending on this package in its core library

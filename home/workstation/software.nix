@@ -6,6 +6,7 @@ let
     cabal-install
     fast-tags
     ghcid
+    nix-thunk
   ];
 in {
   home = {
