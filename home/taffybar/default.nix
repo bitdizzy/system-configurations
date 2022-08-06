@@ -5,7 +5,7 @@ let pkgs = config.my.nixpkgs.default;
       taffybar = doJailbreak (addPkgconfigDepends (self.callCabal2nix "taffybar" sources.taffybar {}) [pkgs.gtk3]);
     });
     taffybarSources = infra.mapSubdirectories infra.thunkSource ./.;
-    chosenTaffybar = taffybarSources.${config.my.taffybar.source};
+    chosenTaffybar = taffybarSources.${config.my.machine.flavor};
 in {
   options.my.taffybar = with lib; {
     source = mkOption {

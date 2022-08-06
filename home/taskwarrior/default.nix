@@ -20,6 +20,9 @@ in {
     programs =
       let homeDirectory = config.home.homeDirectory;
       in {
+        zsh.oh-my-zsh.plugins = [
+          "taskwarrior"
+        ];
         taskwarrior = {
           enable = true;
           dataLocation = "${homeDirectory}/.task";

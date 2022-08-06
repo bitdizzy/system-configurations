@@ -5,9 +5,9 @@ in rec {
   imports = [
     (import ../infra)
     (import ../sources)
-    (import ./common.nix)
+    (import ./basic)
     (import ./workstation.nix)
   ];
 
-  my.taffybar.source = "laptop";
+  my.machine.flavor = "laptop";
 }

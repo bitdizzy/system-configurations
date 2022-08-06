@@ -3,10 +3,6 @@
 let pkgs = config.my.nixpkgs.default;
 in {
 
-  imports = [
-    (import ./basic.nix)
-  ];
-
   home = {
     file = {
       custom_oh-my-zsh = {
