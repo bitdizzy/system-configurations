@@ -1,11 +1,16 @@
-{ pkgs, lib, ... }:
+{  config, ... }:
 
-let
-  nixpkgsUnstableSrc = import ../../deps/nixpkgs-unstable/thunk.nix;
-  unstablePkgs = import nixpkgsUnstableSrc {};
+let pkgs = config.my.nixpkgs.default;
 in {
-  imports = [
-    (import ./software.nix { inherit unstablePkgs; })
-  ];
+  home = {
+    packages = with pkgs; [
+      dolphinEmu
+      dwarf-fortress
+      electrum
+      monero-gui
+      # lutris
+      minecraft
+    ];
+  };
 
 }

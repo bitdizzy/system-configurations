@@ -1,16 +1,15 @@
-{ homeDirectory, taskServerHost, taskServerPort, taskCredentials, privateModules ? [] }: { pkgs, lib, ... }:
+{ ... }:
 
 rec {
   imports = [
-    (import ./common)
-    (import ./workstation { inherit homeDirectory taskServerHost taskServerPort taskCredentials; })
+    (import ../infra)
+    (import ../sources)
+    (import ./common.nix)
+    (import ./workstation.nix)
     (import ./personal)
-    (import ./yubikey.nix)
-  ] ++ privateModules;
+    (import ./yubikey)
+  ];
 
-  home = {
-    inherit homeDirectory;
-  };
-
+  my.taffybar.source = "desktop";
 }
 

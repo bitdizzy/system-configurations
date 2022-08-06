@@ -10,12 +10,15 @@ rec {
   testConfiguration = { ... }:
     {
       imports = [
-        (import home {
-          homeDirectory = "/home/test";
-          taskServerHost = "example.com";
-          taskServerPort = 55555;
-          taskCredentials = "";
-        })
+        (import home)
       ];
+
+      my.taskwarrior = {
+        host = "example.com";
+        port = 55555;
+        credentials = "";
+      };
+
+      home.homeDirectory = "/home/test";
     };
 }

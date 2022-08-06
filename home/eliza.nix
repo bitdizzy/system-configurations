@@ -7,11 +7,7 @@ in rec {
     (import ../sources)
     (import ./common.nix)
     (import ./workstation.nix)
-    (import ./acpi)
-    (import ./daw)
-    (import ./theorems)
   ];
 
   my.taffybar.source = "laptop";
-
 }

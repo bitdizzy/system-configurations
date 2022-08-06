@@ -4,13 +4,8 @@ let pkgs = config.my.nixpkgs.default;
 in {
   home = {
     packages = with pkgs; [
-      agda
-      coq
+      acpi
     ];
   };
 
-  programs.vim.plugins = with pkgs.vimPlugins; [
-    agda-vim
-    Coqtail
-  ];
 }

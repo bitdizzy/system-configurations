@@ -4,13 +4,12 @@ let pkgs = config.my.nixpkgs.default;
 in {
   home = {
     packages = with pkgs; [
-      agda
-      coq
+      fzf
+      silver-searcher
     ];
   };
 
-  programs.vim.plugins = with pkgs.vimPlugins; [
-    agda-vim
-    Coqtail
-  ];
+  programs.zsh.initExtra = ''
+    export FZF_DEFAULT_COMMAND='ag -i -g ""'
+  '';
 }
