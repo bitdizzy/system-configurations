@@ -74,9 +74,12 @@ let
       zsh = {
         enable = true;
         dotDir = "zsh";
-        oh-my-zsh.plugins = [
-          "git"
-        ];
+        oh-my-zsh = {
+          enable = true;
+          plugins = [
+            "git"
+          ];
+        };
         initExtra = ''
           setopt PromptSp
           export FZF_DEFAULT_COMMAND='ag -i -g ""'
