@@ -45,6 +45,7 @@
   };
 
   config = {
+    nixpkgs.config.allowUnfree = true;
 
     home = {
       file = {

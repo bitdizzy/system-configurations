@@ -7,7 +7,7 @@ let fetch = {url, rev, branch ? null, sha256 ? null, fetchSubmodules ? false, pr
   in if !fetchSubmodules && private then builtins.fetchGit {
     url = realUrl; inherit rev;
     ${if branch == null then null else "ref"} = branch;
-  } else (import <nixpkgs> {}).fetchgit {
+  } else (import "/nix/store/qjg458n31xk1l6lj26c3b871d4i4is98-source" {}).fetchgit {
     url = realUrl; inherit rev sha256;
   };
   json = builtins.fromJSON (builtins.readFile ./git.json);
