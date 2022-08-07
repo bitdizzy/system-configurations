@@ -5,7 +5,7 @@
     (import ../infra)
     (import ../sources)
     (import ./basic)
-    (import ./haskell)
+    (import ./dev)
     (import ./graphical)
     (import ./workstation.nix)
     (import ./daw)
@@ -13,4 +13,7 @@
   ];
 
   my.machine.flavor = "laptop";
+
+  home.username = "min";
+  home.stateVersion = "22.11";
 }

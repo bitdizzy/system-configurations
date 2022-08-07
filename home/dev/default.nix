@@ -8,7 +8,7 @@ let
       (import ../haskell)
     ];
 
-    my.haskell.compiler = "ghc8107";
+    my.haskell.compiler = "ghc902";
 
     home.packages = with config.my.haskell.packages; [
       ghc

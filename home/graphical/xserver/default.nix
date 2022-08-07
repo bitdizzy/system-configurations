@@ -136,14 +136,20 @@ in {
 
   xsession = {
     windowManager.xmonad = {
-      haskellPackages = config.my.haskell.packages;
+      # TODO this doesn't work
+      #haskellPackages = with config.my.haskell.lib; config.my.haskell.packages.extend (self: super: {
+      #      taffybar = doJailbreak (addPkgconfigDepends (self.callCabal2nix "taffybar" sources.taffybar {}) [pkgs.gtk3]);
+      #    });
+      # even this, which should be a no-op, doesn't work??
+      # haskellPackages = pkgs.haskellPackages;
       enable = true;
       config = ./xmonad/xmonad.hs;
       enableContribAndExtras = true;
       extraPackages = p: with p; [
+        ghc
         data-default
         lens
-        taffybar
+        # taffybar
       ];
     };
   };

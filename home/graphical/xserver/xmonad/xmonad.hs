@@ -14,7 +14,7 @@ import Language.Haskell.TH
 import System.Exit
 import System.IO
 
-import System.Taffybar.Support.PagerHints
+-- import System.Taffybar.Support.PagerHints
 
 import XMonad.Actions.SwapWorkspaces
 import XMonad.Hooks.DynamicLog
@@ -40,7 +40,7 @@ myPromptConfig = def
   }
 
 main = do
-    xmonad $ ewmh $ pagerHints $ withUrgencyHook NoUrgencyHook $
+    xmonad $ ewmh $ {- pagerHints $ -} withUrgencyHook NoUrgencyHook $
         def & lnTerminal .~ "urxvt"
             & lnFocusFollowsMouse .~ False
             & lnBorderWidth .~ 0
