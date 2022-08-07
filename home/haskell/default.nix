@@ -28,18 +28,7 @@
 
       compiler = mkOption {
         type = types.str;
+        default = "ghc8107";
       };
     };
-
-  config = {
-    my.haskell.compiler = "ghc8107";
-
-    home.packages = with config.my.haskell.packages; [
-      ghc
-      cabal-install
-      ghcid
-      fast-tags
-      haskell-language-server
-    ];
-  };
 }

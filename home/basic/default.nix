@@ -2,17 +2,20 @@
 
 let
   pkgs = config.my.nixpkgs.default;
-  # Set up how we deal with various flavours of machines
+  # Set up how we deal with variations of machines
   optionModule = {
-    options = with lib; {
-      my.machine.flavor = mkOption {
-        type = types.enum [
-          "laptop"
-          "desktop"
-          "server"
-          "router"
-        ];
-        description = "What sort of machine is this?";
+    options.my = with lib; {
+      machine = {
+        # what sort of machine is it?
+        flavor = mkOption {
+          type = types.enum [
+            "laptop"
+            "desktop"
+            "server"
+            "router"
+          ];
+          description = "What sort of machine is this?";
+        };
       };
     };
   };

@@ -1,0 +1,8 @@
+{
+  "owner": "nix-community",
+  "repo": "home-manager",
+  "branch": "master",
+  "private": false,
+  "rev": "684e85d01d333be91c4875baebb05b93c7d2ffaa",
+  "sha256": "0n568azlc9d3cwh4pdyac469rgq1bja9hgagr5nf35ssz1kaqizg"
+}

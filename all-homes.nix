@@ -10,5 +10,6 @@ in rec {
   homes = {
     isbell = evalConf ./home/isbell.nix;
     lucy = evalConf ./home/lucy.nix;
+    eliza = evalConf ./home/eliza.nix;
   };
 }
