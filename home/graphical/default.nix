@@ -1,4 +1,4 @@
-{ infra, config, lib, sources, ... }:
+{ infra, config, lib, sources, build, ... }:
 
 let
   pkgs = config.my.nixpkgs.default;
@@ -15,7 +15,7 @@ in {
   imports = [
     # my favorite terminal emulator :)
     (import ./urxvt)
-   ] ++ (lib.optional true linuxModule);
+   ] ++ (lib.optional (build.hostPlatform.isLinux) linuxModule);
 
   home.packages = with pkgs; [
   ] ++ lib.optional (pkgs.hostPlatform.isDarwin) [

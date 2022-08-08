@@ -2,8 +2,6 @@
 
 {
   imports = [
-    (import ../infra)
-    (import ../sources)
     (import ./basic)
     (import ./dev)
     (import ./graphical)

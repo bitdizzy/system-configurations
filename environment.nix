@@ -5,4 +5,10 @@ rec {
   };
 
   sources = infra.mapSubdirectories infra.thunkSource ./sources;
+
+  build = rec {
+    inherit (pkgs) hostPlatform;
+    pkgs = import (sources.nixpkgs-unstable) {};
+  };
+
 }

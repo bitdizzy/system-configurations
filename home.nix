@@ -5,6 +5,7 @@ rec {
     inherit pkgs;
     confPath = testConfiguration;
     confAttr = null;
+    extraSpecialArgs = import ./environment.nix;
   };
 
   testConfiguration = { ... }:
