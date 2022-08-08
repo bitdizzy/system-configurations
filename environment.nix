@@ -1,8 +1,8 @@
 rec {
-  infra = {
+  infra = rec {
     inherit (thunk) mapSubdirectories thunkSource;
-    thunk = import ./nix-thunk {};
+    thunk = import ./sources/nix-thunk {};
   };
 
-  sources = mapSubdirectories thunkSource ./sources;
+  sources = infra.mapSubdirectories infra.thunkSource ./sources;
 }
