@@ -71,9 +71,10 @@ let
       ssh.enable = true;
 
       # zsh integrations
-      zsh = {
+      zsh = rec {
         enable = true;
         dotDir = "zsh";
+        history.path = "${config.home.homeDirectory}/${dotDir}/.zsh_history";
         oh-my-zsh = {
           enable = true;
           plugins = [
