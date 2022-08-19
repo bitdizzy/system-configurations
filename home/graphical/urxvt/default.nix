@@ -21,6 +21,7 @@ in {
       package = pkgs.rxvt_unicode-with-plugins;
       fonts = [
         "xft:JuliaMono:pixelsize=28:antialias=true"
+        "xft:Noto Sans Mono CJK TC:pixelsize=28:antialias=true"
         "xft:Source Code Pro:pixelsize=28:antialias=true"
         "xft:DejaVu Sans Mono:pixelsize=28:antialias=true"
         "xft:unifont:pixelsize=28"
@@ -51,6 +52,7 @@ in {
       extraConfig = {
         boldFont = ''
           xft:JuliaMono:bold:pixelsize=28:antialaias=true, \
+          "xft:Noto Sans Mono CJK TC:pixelsize=28:antialias=true" \
           xft:Source Code Pro:bold:pixelsize=28:antialias=true, \
           xft:DejaVu Sans Mono:bold:pixelsize=28:antialias=true, \
           xft:unifont:pixelsize=28:bold
