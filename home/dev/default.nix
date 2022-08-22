@@ -33,6 +33,7 @@ in {
       awscli2
       ctags
       ddd
+      git-crypt
       xdelta
     ];
   };
