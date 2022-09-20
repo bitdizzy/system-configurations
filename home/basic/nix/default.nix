@@ -25,6 +25,12 @@
       readOnly = true;
     };
 
+    head = mkOption {
+      type = types.attrs;
+      default = import config.my.nixpkgs.head-src {};
+      readOnly = true;
+    };
+
     stable-src = mkOption {
       type = types.path;
       default = sources.nixpkgs-stable;
@@ -40,6 +46,12 @@
     master-src = mkOption {
       type = types.path;
       default = sources.nixpkgs-master;
+      readOnly = true;
+    };
+
+    head-src = mkOption {
+      type = types.path;
+      default = sources.nixpkgs-head;
       readOnly = true;
     };
   };

@@ -4,9 +4,10 @@ let pkgs = config.my.nixpkgs.default;
 in {
   home = let
     masterPkgs = config.my.nixpkgs.master;
+    headPkgs = config.my.nixpkgs.head;
   in {
     packages = with pkgs; [
-      masterPkgs.discord
+      headPkgs.discord
       masterPkgs.signal-desktop
     ];
   };
