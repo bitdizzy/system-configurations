@@ -8,6 +8,7 @@
     (import ./workstation.nix)
     (import ./daw)
     (import ./theorems)
+    (import ./personal)
   ];
 
   my.machine.flavor = "laptop";
