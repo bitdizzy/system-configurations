@@ -8,7 +8,7 @@ let
       (import ./xcompose)
       (import ./xserver)
       (import ./xsession)
-      (import ./taffybar)
+      # (import ./taffybar)
     ];
   };
 in {
