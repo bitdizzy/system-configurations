@@ -10,6 +10,8 @@ in {
       monero-gui
       # lutris
       minecraft
+      deluge
+      syncplay
     ];
   };
 
