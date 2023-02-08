@@ -7,4 +7,7 @@
   virtualisation.libvirtd.enable = true;
   users.extraGroups.libvirtd.members = virtUsers;
 
+  virtualisation.docker.enable = true;
+  users.extraGroups.docker.members = virtUsers;
+
 }
