@@ -28,7 +28,7 @@
 
       compiler = mkOption {
         type = types.str;
-        default = "ghc940";
+        default = "ghc944";
       };
     };
 }

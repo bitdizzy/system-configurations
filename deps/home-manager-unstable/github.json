@@ -3,6 +3,6 @@
   "repo": "home-manager",
   "branch": "standalone-extraSpecialArgs",
   "private": false,
-  "rev": "727df37d42dd3de4bb39d7f78ba0ce5df12e081a",
-  "sha256": "11bqcrhwkwgknan8rfphzslajkv46zlrnr1pap3xz4x241s38g3q"
+  "rev": "ca2c3836e8b2608629c4db7a31f26ffd8777ddb6",
+  "sha256": "13hn7b2j2dbm8hnaly64ab1gdk17pqbcv0jzwvhz06rbqyrspfgl"
 }

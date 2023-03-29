@@ -8,12 +8,12 @@ let
       (import ../haskell)
     ];
 
-    my.haskell.compiler = "ghc902";
+    my.haskell.compiler = "ghc944";
 
     home.packages = with config.my.haskell.packages; [
       ghc
       cabal-install
-      ghcid
+      # ghcid
       fast-tags
       haskell-language-server
     ];
