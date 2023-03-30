@@ -45,7 +45,7 @@ set viminfo+=n~/.vim/.viminfo/.viminfo
 map <leader>\ :NERDTreeToggle<CR>
 
 set mouse=a
-set ttymouse=urxvt
+set ttymouse=sgr
 
 let g:fzf_action = {
       \ 'ctrl-s': 'split',
