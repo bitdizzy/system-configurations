@@ -46,6 +46,9 @@ in {
       name = "Numix";
       package = pkgs.numix-gtk-theme;
     };
+    gtk2.extraConfig = ''
+      gtk-error-bell=0
+    '';
   };
 
   qt = {
