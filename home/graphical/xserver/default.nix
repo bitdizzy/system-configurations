@@ -48,12 +48,15 @@ in {
     };
     gtk2.extraConfig = ''
       gtk-error-bell=0
+      gtk-enable-event-sounds=0
     '';
     gtk3.extraConfig = {
       gtk-error-bell = 0;
+      gtk-enable-event-sounds = 0;
     };
     gtk4.extraConfig = {
       gtk-error-bell = 0;
+      gtk-enable-event-sounds = 0;
     };
   };
 
