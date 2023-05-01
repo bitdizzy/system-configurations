@@ -18,7 +18,7 @@
       ];
     };
 
-    kernelParams = [ "intel_pstate=active" ];
+    kernelParams = [ "intel_pstate=active" "threadirq" "threadirqs" ];
 
     loader = {
       systemd-boot.enable = true;
@@ -26,6 +26,6 @@
     };
   };
 
-  powerManagement.cpuFreqGovernor = lib.mkForce "performance";
+  # powerManagement.cpuFreqGovernor = lib.mkForce "performance";
 
 }
