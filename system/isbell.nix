@@ -4,7 +4,7 @@ let
   hostName = "isbell";
   numBuildCores = 6;
   displayDpi = 220;
-  videoDriver = "nvidia";
+  videoDriver = "intel";
   nixpkgs = import ../deps/nixpkgs-unstable/thunk.nix;
 in {
   ### Sucks
