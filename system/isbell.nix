@@ -4,7 +4,7 @@ let
   hostName = "isbell";
   numBuildCores = 6;
   displayDpi = 220;
-  videoDriver = "nvidia";
+  videoDriver = "intel";
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     modesetting.enabel = true;
