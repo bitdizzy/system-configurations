@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  services.openssh = {
-    forwardX11 = true;
-    permitRootLogin = "no"; # nope
+  services.openssh.settings = {
+    X11Forwarding = true;
+    PermitRootLogin = "no"; # nope
   };
 }
