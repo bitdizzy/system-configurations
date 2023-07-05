@@ -25,6 +25,7 @@ in {
 
   # themeing and desktop notifications :)
   home.file.custom_oh-my-zsh = {
+    executable = false;
     source = ./zsh_custom;
     target = "${config.home.homeDirectory}/${config.programs.zsh.dotDir}/custom";
   };
