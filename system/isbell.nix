@@ -4,7 +4,7 @@ let
   hostName = "isbell";
   numBuildCores = 6;
   displayDpi = 220;
-  videoDriver = "intel";
+  videoDriver = "nvidia";
 
   nixpkgs = import ../deps/nixpkgs-unstable/thunk.nix;
 in {
@@ -23,16 +23,21 @@ in {
   ] ++ privateConfig;
 
   # Nvidia hybrid
-  #hardware.nvidia = {
-  #  package = config.boot.kernelPackages.nvidiaPackages.stable;
-  #  modesetting.enable = true;
-  #  prime = {
-  #    offload.enable = true;
+  hardware.nvidia = {
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    modesetting.enable = true;
+    powerManagement = {
+      enable = true;
+      finegrained = true;
+    };
+    prime = {
+      offload.enable = true;
+      offload.enableOffloadCmd = true;
 
-  #    intelBusId = "PCI:0:2:0";
-  #    nvidiaBusId = "PCI:1:0:0";
-  #  };
-  #};
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
+  };
 
   hardware.opengl = {
     extraPackages = with pkgs; [
@@ -42,5 +47,7 @@ in {
       libvdpau-va-gl
     ];
   };
+
+  environment.variables."LIBVA_DRIVER_NAME" = "iHD";
 
 }
