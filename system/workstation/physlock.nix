@@ -6,8 +6,8 @@
     allowAnyUser = true;
     disableSysRq = false;
     lockOn = {
-      hibernate = true;
-      suspend = true;
+      hibernate = false;
+      suspend = false;
     };
   };
 
