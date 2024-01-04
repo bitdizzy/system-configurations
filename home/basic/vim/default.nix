@@ -47,7 +47,7 @@ in {
         vim-nix
         my-papercolor-theme
         fzf-vim
-        YouCompleteMe
+        #YouCompleteMe
         vim-matchup
       ];
       settings = {

@@ -20,12 +20,12 @@ in {
     gpg-agent = {
       enable = true;
       # Default for XFCE
-      pinentryFlavor = lib.mkIf (pkgs.stdenv.isLinux) "gtk2";
+      pinentryFlavor = lib.mkIf (pkgs.stdenv.isLinux) "gnome3";
     };
 
-    password-store-sync = {
-      enable = true;
-    };
+    # password-store-sync = {
+    #   enable = true;
+    # };
   };
 
 }

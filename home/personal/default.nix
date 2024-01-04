@@ -6,7 +6,7 @@ in {
     packages = with pkgs; [
       dolphinEmu
       dwarf-fortress
-      electrum
+      # electrum
       monero-gui
       # lutris
       minecraft

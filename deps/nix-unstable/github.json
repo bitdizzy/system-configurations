@@ -3,6 +3,6 @@
   "repo": "nix",
   "branch": "2.3-maintenance",
   "private": false,
-  "rev": "63ba2fde504fbf71140900b7f91936ad71aabcc5",
-  "sha256": "0h827anq7p7836zhr24pzgj2vjz1jl6yb332xxx371jdddbghxgc"
+  "rev": "575859a535426e468727a5eb0b4db6a9101d2a73",
+  "sha256": "140js248cjb8f8d380bdvwgy936lyfzmnm7qzji7awzjnc033yzn"
 }
