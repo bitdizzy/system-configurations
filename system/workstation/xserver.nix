@@ -16,7 +16,7 @@
   fonts = {
     fontconfig.enable = true;
     fontDir.enable = true;
-    fonts = with pkgs; [
+    packages = with pkgs; [
       corefonts  # Micrsoft free fonts
       inconsolata  # monospaced
       ubuntu_font_family  # Ubuntu fonts
