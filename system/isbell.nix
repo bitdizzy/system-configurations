@@ -27,7 +27,7 @@ in {
     package = config.boot.kernelPackages.nvidiaPackages.beta;
     modesetting.enable = true;
     powerManagement = {
-      enable = true;
+      enable = false;
       finegrained = true;
     };
     prime = {
@@ -48,6 +48,6 @@ in {
     ];
   };
 
-  environment.variables."LIBVA_DRIVER_NAME" = "iHD";
+  # environment.variables."LIBVA_DRIVER_NAME" = "iHD";
 
 }
