@@ -74,6 +74,8 @@ let g:ycm_language_server =
       \ }
       \ ]
 
+let g:ycm_auto_hover = 0
+
 let maplocalleader = ","
 
 function! StartProse()
