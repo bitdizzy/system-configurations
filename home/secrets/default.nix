@@ -20,7 +20,7 @@ in {
     gpg-agent = {
       enable = true;
       # Default for XFCE
-      pinentryFlavor = lib.mkIf (pkgs.stdenv.isLinux) "qt";
+      # pinentryFlavor = lib.mkIf (pkgs.stdenv.isLinux) "qt";
     };
 
     # password-store-sync = {
