@@ -23,9 +23,6 @@ in {
   ] ++ privateConfig;
 
   # Nvidia hybrid
-  services.xserver.videoDrivers = [
-    "intel"
-  ];
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.latest;
 
