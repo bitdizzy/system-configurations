@@ -9,7 +9,7 @@ in {
       # electrum
       monero-gui
       # lutris
-      minecraft
+      # minecraft
       deluge
       syncplay
     ];

@@ -9,8 +9,6 @@
   };
 
   hardware.opengl = {
-    driSupport32Bit = true;
-    driSupport = true;
   };
 
   fonts = {
