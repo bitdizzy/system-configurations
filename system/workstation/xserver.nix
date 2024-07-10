@@ -8,9 +8,6 @@
     jack.enable = true;
   };
 
-  hardware.opengl = {
-  };
-
   fonts = {
     fontconfig.enable = true;
     fontDir.enable = true;

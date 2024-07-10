@@ -18,7 +18,25 @@
       ];
     };
 
-    kernelParams = [ "intel_pstate=active" "threadirq" "threadirqs" ];
+    kernelParams = [
+      "intel_pstate=active"
+      "nvidia_drm.fbdev=1"
+      "nvidia_drm.modeset=1"
+      "NVreg_EnableGpuFirmware=0"
+    ];
+
+    extraModulePackages = [
+      config.boot.kernelPackages.nvidia_x11
+    ];
+
+    blacklistedKernelModules = [
+      "nouveau"
+      "rivafb"
+      "nvidiafb"
+      "rivatv"
+      "nv"
+      "uvcvideo"
+    ];
 
     loader = {
       systemd-boot.enable = true;

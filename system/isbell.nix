@@ -23,13 +23,20 @@ in {
   ] ++ privateConfig;
 
   # Nvidia hybrid
+  services.xserver.videoDrivers = [
+    "intel"
+  ];
   hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    # modesetting.enable = true;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
+
+    modesetting.enable = true;
     powerManagement = {
       enable = true;
-      finegrained = true;
+      finegrained = false;
     };
+    open = false;
+    nvidiaSettings = true;
+
     prime = {
       offload.enable = true;
       offload.enableOffloadCmd = true;
