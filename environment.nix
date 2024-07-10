@@ -8,7 +8,7 @@ rec {
 
   build = rec {
     inherit (pkgs) hostPlatform;
-    pkgs = import (sources.nixpkgs-unstable) {};
+    pkgs = import (sources.nixpkgs-master) {};
   };
 
 }
