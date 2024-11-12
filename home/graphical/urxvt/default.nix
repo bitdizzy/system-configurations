@@ -18,7 +18,7 @@ in {
   programs = {
     urxvt = {
       enable = true;
-      package = pkgs.rxvt_unicode-with-plugins;
+      package = pkgs.rxvt-unicode;
       fonts = [
         "xft:JuliaMono:pixelsize=28:antialias=true"
         "xft:Noto Sans Mono CJK TC:pixelsize=28:antialias=true"

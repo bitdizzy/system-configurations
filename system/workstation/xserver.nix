@@ -17,7 +17,7 @@
       ubuntu_font_family  # Ubuntu fonts
       ttf_bitstream_vera
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-emoji
       xorg.fontbitstream100dpi
       xorg.fontbitstream75dpi

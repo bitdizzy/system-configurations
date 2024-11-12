@@ -4,7 +4,7 @@ let pkgs = config.my.nixpkgs.default;
 in {
   home = {
     packages = with pkgs; [
-      dolphinEmu
+      dolphin-emu
       dwarf-fortress
       # electrum
       monero-gui
