@@ -23,6 +23,7 @@
       "nvidia_drm.fbdev=1"
       "nvidia_drm.modeset=1"
       "NVreg_EnableGpuFirmware=0"
+      "zfs.zfs_arc_max=17179869184"
     ];
 
     extraModulePackages = [
