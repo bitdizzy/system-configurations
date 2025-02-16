@@ -6,7 +6,7 @@ in {
     keyboard = null;
     packages = with pkgs; [
       gtk3
-      gnome.adwaita-icon-theme
+      adwaita-icon-theme
       numix-gtk-theme
       numix-icon-theme
       hicolor-icon-theme
@@ -40,7 +40,7 @@ in {
     enable = true;
     iconTheme = {
       name = "Adwaita";
-      package = pkgs.gnome.adwaita-icon-theme;
+      package = pkgs.adwaita-icon-theme;
     };
     theme = {
       name = "Numix";
