@@ -100,4 +100,9 @@
   # get gnome stuff to work in home manager
   services.dbus.packages = with pkgs; [ dconf ];
 
+  # make QT apps scale not bad
+  environment.sessionVariables = {
+    "QT_AUTO_SCREEN_SCALE_FACTOR" = 0;
+  };
+
 }
