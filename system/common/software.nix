@@ -11,7 +11,7 @@
           traceroute
           wget
           # nix management
-          gitAndTools.gitFull
+          gitFull
           basalt.basalt
           obelisk.command
         ];

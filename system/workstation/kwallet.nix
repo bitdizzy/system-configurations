@@ -7,8 +7,8 @@
 
   environment.systemPackages = with pkgs; [
     # Secrets for stupid apps like Okta that I don't want mucking with my password store
-    libsForQt515.kdeFrameworks.kwallet
-    libsForQt515.kdeApplications.kwalletmanager
+    #libsForQt5.kdeFrameworks.kwallet
+    #libsForQt5.kdeApplications.kwalletmanager
   ];
 
 }

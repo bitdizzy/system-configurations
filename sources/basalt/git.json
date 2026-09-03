@@ -1,7 +1,7 @@
 {
   "url": "https://gitlab.com/obsidian.systems/basalt.git",
-  "rev": "424664306a31a0319abd6290755da7b78014e235",
-  "sha256": "093ihyzfsimqm82wzvpw1vwf6q3fix4s7jbs369gdv6gj49q2cbx",
+  "rev": "2290225b4d896dd1a7b4188d614f91e149adfce0",
+  "sha256": "138fc6mrdnxm5rpkya6nfcj0bhq4wq2rbrw0ji623c7ds7a42mix",
   "private": false,
   "fetchSubmodules": false,
   "branch": "develop"

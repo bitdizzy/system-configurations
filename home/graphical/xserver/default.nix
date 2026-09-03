@@ -7,8 +7,6 @@ in {
     packages = with pkgs; [
       gtk3
       adwaita-icon-theme
-      numix-gtk-theme
-      numix-icon-theme
       hicolor-icon-theme
 
       libinput
@@ -42,10 +40,10 @@ in {
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;
     };
-    theme = {
-      name = "Numix";
-      package = pkgs.numix-gtk-theme;
-    };
+    #theme = {
+    #  name = "Numix";
+    #  package = pkgs.numix-gtk-theme;
+    #};
     gtk2.extraConfig = ''
       gtk-error-bell=0
       gtk-enable-event-sounds=0

@@ -5,9 +5,9 @@
 
   services.logind = {
     lidSwitch = "ignore";
-    extraConfig = ''
-      HandlePowerKey=ignore
-    '';
+    settings.Login = {
+      HandlePowerKey = "ignore";
+    };
   };
 
   services.upower.enable = true;

@@ -3,7 +3,7 @@
 {
   home = {
     packages = with config.my.nixpkgs.default; [
-      wineWowPackages.staging
+      #wineWowPackages.staging
       winetricks
     ];
   };

@@ -54,7 +54,7 @@ let
         p7zip
         # better search tools
         fzf
-        silver-searcher
+        silver-searcher-ng
       ] # perf monitoring on linux
       ++ lib.optionals pkgs.stdenv.isLinux [
         iotop

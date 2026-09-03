@@ -4,7 +4,7 @@
 
   programs = {
     dconf.enable = true;
-    ssh.startAgent = true;
+    # ssh.startAgent = true;
   };
 
 }

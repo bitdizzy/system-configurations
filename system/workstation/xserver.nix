@@ -21,15 +21,15 @@
     packages = with pkgs; [
       corefonts  # Micrsoft free fonts
       inconsolata  # monospaced
-      ubuntu_font_family  # Ubuntu fonts
+      ubuntu-classic  # Ubuntu fonts
       ttf_bitstream_vera
       noto-fonts
       noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       xorg.fontbitstream100dpi
       xorg.fontbitstream75dpi
       xorg.fontbitstreamtype1
-      vistafonts
+      vista-fonts
       unifont
       terminus_font
       freefont_ttf
